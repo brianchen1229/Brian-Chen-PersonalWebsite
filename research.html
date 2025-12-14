@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Research | Po-Wei (Brian) Chen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand">Po-Wei (Brian) Chen</a>
+            <nav class="nav-links">
+                <a href="research.html">Research</a>
+                <a href="extracurricular.html">Extracurricular</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="section-container">
+                <h2>Research Interests</h2>
+                <p>
+                    My research interests lie in probabilistic generative modeling, with a particular focus on
+                    diffusion-based models and their applications to financial markets and extreme events.
+                    I am interested in developing statistically grounded models that can generate realistic
+                    scenarios for risk management and asset pricing.
+                </p>
+
+                <h3>Working Papers & Projects</h3>
+                <ul>
+                    <li>
+                        <strong>Empirical Asset Pricing via Machine Learning for Cryptocurrency</strong><br />
+                        (Co-authors, conference, year)<br />
+                        Short description of the methodology and main findings.
+                    </li>
+                    <li>
+                        <strong>Catalytic-CARD: Diffusion Models with Bayesian Priors</strong><br />
+                        Ongoing work on augmenting diffusion-based models with catalytic priors to improve
+                        generalization in data-scarce settings.
+                    </li>
+                    <!-- 之後可以補上 preprint / slides / GitHub 連結 -->
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <p>
+                &copy; <span id="year"></span> Po-Wei (Brian) Chen
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
