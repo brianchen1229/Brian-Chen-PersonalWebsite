@@ -10,10 +10,10 @@
     <!-- Navigation Bar -->
     <header class="navbar">
         <div class="nav-container">
-            <a href="#home" class="brand">Po-Wei (Brian) Chen</a>
+            <a href="index.html" class="brand">Po-Wei (Brian) Chen</a>
             <nav class="nav-links">
-                <a href="#research">Research</a>
-                <a href="#extracurricular">Extracurricular</a>
+                <a href="research.html">Research</a>
+                <a href="extracurricular.html">Extracurricular</a>
             </nav>
         </div>
     </header>
@@ -23,92 +23,88 @@
         <section id="home" class="hero">
             <div class="hero-container">
                 <div class="hero-left">
-                    <img src="profile.jpg" alt="Profile photo of Po-Wei (Brian) Chen" class="profile-photo" />
+                    <!-- 注意：這裡用 root 底下的 profile.jpg -->
+                    <img src="profile.jpg"
+                         alt="Profile photo of Po-Wei (Brian) Chen"
+                         class="profile-photo" />
                 </div>
                 <div class="hero-right">
                     <h1>Po-Wei (Brian) Chen</h1>
                     <p class="subtitle">
-                        Research Assistant · Statistics & Machine Learning · Financial Applications
+                        Current Position: Research Assistant, Institute of Statistical Science, Academia Sinica
                     </p>
-
-                    <div class="info-grid">
-                        <!-- Work Experience -->
-                        <div class="info-card">
-                            <h2>Work Experience</h2>
-                            <ul>
-                                <li>
-                                    <strong>Research Assistant</strong><br />
-                                    Institute of Statistical Science, Academia Sinica<br />
-                                    Supervisor: Prof. Hsin-Cheng Huang
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- Education -->
-                        <div class="info-card">
-                            <h2>Education</h2>
-                            <ul>
-                                <li>
-                                    <strong>B.B.A. in Financial Engineering and Actuarial Mathematics</strong><br />
-                                    Soochow University, Taiwan<br />
-                                    (Year of graduation)
-                                </li>
-                                <li>
-                                    <strong>Current Position</strong><br />
-                                    Research Assistant, Academia Sinica
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Research Section -->
-        <section id="research" class="section">
+        <!-- Work Experience -->
+        <section class="section">
             <div class="section-container">
-                <h2>Research</h2>
-                <p>
-                    My research interests lie in probabilistic generative modeling, diffusion-based models,
-                    and their applications to financial markets and extreme events. I am particularly interested
-                    in developing statistically grounded models that can generate realistic scenarios for risk
-                    management and asset pricing.
-                </p>
+                <h2>Work Experience</h2>
 
-        <h3>Working Papers & Projects</h3>
-                <ul>
-                    <li>
-                        <strong>Empirical Asset Pricing via Machine Learning for Cryptocurrency</strong><br />
-                        (Co-authors, conference, year) – Short description of your contribution and key findings.
-                    </li>
-                    <li>
-                        <strong>Catalytic-CARD: Diffusion Models with Bayesian Priors</strong><br />
-                        Ongoing work on augmenting diffusion-based models with catalytic priors to improve
-                        generalization in data-scarce settings.
-                    </li>
-                </ul>
+                <div class="timeline">
+
+                    <div class="timeline-item">
+                        <div class="timeline-main">
+                            <h3>Research Assistant</h3>
+                            <p class="timeline-place">
+                                Institute of Statistical Science, Academia Sinica
+                            </p>
+                            <p class="timeline-detail">
+                                Supervisor: Prof. Hsin-Cheng Huang
+                            </p>
+                        </div>
+                        <div class="timeline-date">
+                            2024 – Present
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-main">
+                            <h3>Teaching Assistant</h3>
+                            <p class="timeline-place">
+                                (Course name), Soochow University
+                            </p>
+                            <p class="timeline-detail">
+                                Assisted in tutorials, grading, and student consultation.
+                            </p>
+                        </div>
+                        <div class="timeline-date">
+                            20XX – 20XX
+                        </div>
+                    </div>
+
+                    <!-- 之後有其他工作就照這個格式往下加 -->
+
+                </div>
             </div>
         </section>
 
-        <!-- Extracurricular Section -->
-        <section id="extracurricular" class="section section-alt">
+        <!-- Education -->
+        <section class="section section-alt">
             <div class="section-container">
-                <h2>Extracurricular</h2>
-                <p>
-                    Outside of research, I have a strong background in basketball and various extracurricular activities.
-                    These experiences shaped my teamwork, discipline, and resilience, which also influence my research life.
-                </p>
+                <h2>Education</h2>
 
-                <ul>
-                    <li>
-                        <strong>Basketball Team Member</strong><br />
-                        High school varsity team, sports scholarship student.
-                    </li>
-                    <li>
-                        <strong>Academic Clubs / Activities</strong><br />
-                        (e.g., statistics club, coding study group, competition teams)
-                    </li>
-                </ul>
+                <div class="timeline">
+
+                    <div class="timeline-item">
+                        <div class="timeline-main">
+                            <h3>B.S. in Financial Engineering and Actuarial Mathematics</h3>
+                            <p class="timeline-place">
+                                Soochow University, Taiwan
+                            </p>
+                            <p class="timeline-detail">
+                                Graduated with top ranking in class. (You can add awards / honors here.)
+                            </p>
+                        </div>
+                        <div class="timeline-date">
+                            20XX – 20XX
+                        </div>
+                    </div>
+
+                    <!-- 之後如果有 Ph.D. 或其他學位再加 -->
+
+                </div>
             </div>
         </section>
     </main>
