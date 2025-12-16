@@ -69,11 +69,11 @@ body {
 }
 
 .profile-photo {
-    width: 140px;
-    height: 140px;
+    width: 160px;
+    height: 160px;
     border-radius: 999px;
     object-fit: contain;          /* 原本是 cover，改成 contain */
-    object-position: 50% 25%;     /* 視情況再調高或調低，例如 20%、30% */
+    object-position: 60% 25%;     /* 視情況再調高或調低，例如 20%、30% */
     border: 3px solid #e5e7eb;
     box-shadow: 0 10px 25px rgba(15, 23, 42, 0.15);
     background-color: #f3f4f6;    /* 畫面邊邊空白時比較好看 */
