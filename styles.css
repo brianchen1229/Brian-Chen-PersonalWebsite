@@ -124,23 +124,37 @@ body {
     margin-bottom: 0.8rem;
 }
 
+/* ==== TRIA two photos side by side ==== */
 .conf-photo-row {
     margin-top: 0.7rem;
-    display: flex;          /* 讓裡面的 img 水平排 */
-    gap: 0.75rem;           /* 圖和圖中間的空隙 */
+    display: flex;              /* 讓裡面的 img 水平排列 */
+    flex-direction: row;
+    gap: 0.75rem;               /* 中間間距 */
     justify-content: flex-start;
     align-items: flex-start;
-    flex-wrap: wrap;        /* 螢幕太窄時允許換行（手機比較好看） */
+    flex-wrap: nowrap;          /* 先不要換行，桌機一定左右並排 */
 }
 
 .conf-photo-small {
-    flex: 0 0 45%;          /* 每張大約佔一半寬度 */
-    max-width: 45%;
+    flex: 0 0 48%;              /* 每張大約一半寬度 */
+    max-width: 48%;
     height: auto;
     border-radius: 0.75rem;
     box-shadow: 0 4px 10px rgba(15, 23, 42, 0.12);
     display: block;
     object-fit: cover;
+}
+
+/* 手機才允許換行，避免太擠 */
+@media (max-width: 640px) {
+    .conf-photo-row {
+        flex-wrap: wrap;
+    }
+
+    .conf-photo-small {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
 }
 
 /* Timeline style for CV-like layout */
