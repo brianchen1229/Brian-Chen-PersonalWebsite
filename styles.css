@@ -124,6 +124,25 @@ body {
     margin-bottom: 0.8rem;
 }
 
+.conf-photo-row {
+    margin-top: 0.7rem;
+    display: flex;          /* 讓裡面的 img 水平排 */
+    gap: 0.75rem;           /* 圖和圖中間的空隙 */
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;        /* 螢幕太窄時允許換行（手機比較好看） */
+}
+
+.conf-photo-small {
+    flex: 0 0 45%;          /* 每張大約佔一半寬度 */
+    max-width: 45%;
+    height: auto;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.12);
+    display: block;
+    object-fit: cover;
+}
+
 /* Timeline style for CV-like layout */
 .timeline {
     display: flex;
