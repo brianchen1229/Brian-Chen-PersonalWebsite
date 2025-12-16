@@ -115,6 +115,15 @@ body {
     color: #111827;
 }
 
+.pub-list {
+    margin-left: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.pub-list li {
+    margin-bottom: 0.8rem;
+}
+
 /* Timeline style for CV-like layout */
 .timeline {
     display: flex;
