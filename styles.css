@@ -69,8 +69,8 @@ body {
 }
 
 .profile-photo {
-    width: 180px;
-    height: 180px;
+    width: 240px;
+    height: 240px;
     border-radius: 999px;
     object-fit: contain;          /* 原本是 cover，改成 contain */
     object-position: 50% 25%;     /* 視情況再調高或調低，例如 20%、30% */
