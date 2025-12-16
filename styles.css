@@ -63,14 +63,14 @@ body {
 }
 
 .hero-left {
-    flex: 0 0 190px;
+    flex: 0 0 280px;   /* 給它比頭像大一點的寬度，例如 280px */
     display: flex;
     justify-content: center;
 }
 
 .profile-photo {
-    width: 240px;
-    height: 240px;
+    width: 200px;
+    height: 200px;
     border-radius: 999px;
     object-fit: contain;          /* 原本是 cover，改成 contain */
     object-position: 50% 25%;     /* 視情況再調高或調低，例如 20%、30% */
