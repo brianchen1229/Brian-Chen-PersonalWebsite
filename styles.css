@@ -308,7 +308,7 @@ body {
 .ball-photo {
     margin-top: 0.4rem;
     width: 100%;
-    max-width: 350px;
+    max-width: 250px;
     border-radius: 0.75rem;
     box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
     display: block;
