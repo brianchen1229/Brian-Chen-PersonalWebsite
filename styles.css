@@ -314,6 +314,26 @@ body {
     display: block;
 }
 
+/* 兩張籃球照片左右並排 */
+.ball-photo-row {
+    margin-top: 0.4rem;
+    display: flex;
+    gap: 0.75rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;          /* 螢幕窄的時候允許換行 */
+}
+
+.ball-photo-half {
+    flex: 0 0 48%;            /* 每張大約佔一半寬度 */
+    max-width: 48%;
+    width: 100%;
+    border-radius: 0.75rem;
+    box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
+    display: block;
+    object-fit: cover;
+}
+
 /* 小螢幕調整 */
 @media (max-width: 640px) {
     .ball-timeline {
