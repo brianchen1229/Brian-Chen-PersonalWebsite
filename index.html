@@ -5,6 +5,18 @@
     <title>Po-Wei (Brian) Chen | Academic Website</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <style>
+        /* 為了確保列表在卡片內正確顯示，加入一點內聯樣式修正 */
+        .timeline-detail ul {
+            list-style-position: inside;
+            padding-left: 0;
+            margin-top: 8px;
+            list-style-type: disc;
+        }
+        .timeline-detail li {
+            margin-bottom: 4px;
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -23,22 +35,20 @@
         <section id="home" class="hero">
             <div class="hero-container">
                 <div class="hero-left">
-                    <!-- 注意：這裡用 root 底下的 profile.jpg -->
                     <img src="Profile.jpg"
                          alt="Profile photo of Po-Wei (Brian) Chen"
                          class="profile-photo" />
                 </div>
-                    <div class="hero-right">
-                        <h1>Po-Wei (Brian) Chen</h1>
-                        <p class="subtitle">
-                            Current Position: Research Assistant, Institute of Statistical Science, Academia Sinica
-                        </p>
+                <div class="hero-right">
+                    <h1>Po-Wei (Brian) Chen</h1>
+                    <p class="subtitle">
+                        Current Position: Research Assistant, Institute of Statistical Science, Academia Sinica
+                    </p>
                     
-                        <!-- Emails (新增這段) -->
-                        <p class="contact">
-                            <a href="mailto:brianchen1229@gmail.com">brianchen1229@gmail.com</a> ·
-                            <a href="mailto:brianc@stat.sinica.edu.tw">brianc@stat.sinica.edu.tw</a>
-                        </p>
+                    <p class="contact">
+                        <a href="mailto:brianchen1229@gmail.com">brianchen1229@gmail.com</a> ·
+                        <a href="mailto:brianc@stat.sinica.edu.tw">brianc@stat.sinica.edu.tw</a>
+                    </p>
                 </div>
             </div>
         </section>
@@ -49,7 +59,6 @@
                 <h2>Work Experience</h2>
 
                 <div class="timeline">
-
                     <div class="timeline-item">
                         <div class="timeline-main">
                             <h3>Research Assistant</h3>
@@ -64,9 +73,6 @@
                             Aug. 2024 – Present
                         </div>
                     </div>
-
-                    <!-- 之後有其他工作就照這個格式往下加 -->
-
                 </div>
             </div>
         </section>
@@ -77,28 +83,25 @@
                 <h2>Education</h2>
 
                 <div class="timeline">
-
                     <div class="timeline-item">
                         <div class="timeline-main">
                             <h3>B.B.A. in Financial Engineering and Actuarial Mathematics</h3>
                             <p class="timeline-place">
                                 Soochow University, Taipei, Taiwan
                             </p>
-                            <p class="timeline-detail">
+                            <!-- 修正後的教育背景列表 -->
+                            <div class="timeline-detail">
                                 <ul>
                                     <li>Graduated 1 year early.</li>
                                     <li>Cumulative GPA: 4.0/4.0</li>
                                     <li>6 times Academic Excellence Award</li>
                                 </ul>
-                            </p>
+                            </div>
                         </div>
                         <div class="timeline-date">
                             Sept. 2022 – June 2025
                         </div>
                     </div>
-
-                    <!-- 之後如果有 Ph.D. 或其他學位再加 -->
-
                 </div>
             </div>
         </section>
