@@ -6,8 +6,8 @@
 }
 
 .profile-photo {
-    width: 130px;    /* 縮小頭像寬度，原為 160px */
-    height: 130px;   /* 縮小頭像高度，原為 160px */
+    width: 30px;    /* 縮小頭像寬度，原為 160px */
+    height: 30px;   /* 縮小頭像高度，原為 160px */
     border-radius: 50%;
     object-fit: cover; /* 建議改用 cover 避免縮放變形 */
     object-position: center; 
