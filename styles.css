@@ -1,4 +1,4 @@
-/* 全域設定 */
+/* 全域重置 */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -12,7 +12,7 @@ body {
     background-color: #f4f4f5;
 }
 
-/* Navbar 導覽列 */
+/* 導覽列 */
 .navbar {
     position: sticky;
     top: 0;
@@ -25,7 +25,7 @@ body {
 .nav-container {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 0.6rem 1.2rem;
+    padding: 0.8rem 1.2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -38,45 +38,37 @@ body {
 }
 
 .nav-links a {
-    margin-left: 1rem;
+    margin-left: 1.5rem;
     text-decoration: none;
     color: #4b5563;
     font-size: 0.95rem;
 }
 
-.nav-links a:hover {
-    color: #2563eb;
-}
-
-/* Hero Section 核心修正版 */
+/* Hero 區塊修正 */
 .hero {
-    padding: 3.5rem 1.2rem;
-    background: linear-gradient(135deg, #f9fafb, #e5e7eb);
+    padding: 4rem 1.2rem;
+    background: linear-gradient(135deg, #f8fafc, #f1f5f9);
 }
 
 .hero-container {
     max-width: 900px;
     margin: 0 auto;
     display: flex;
-    gap: 2.5rem;
+    gap: 3rem;
     align-items: center;
-    flex-wrap: nowrap;
 }
 
 .hero-left {
-    flex: 0 0 140px; /* 固定頭像容器大小 */
-    display: flex;
-    justify-content: center;
+    flex: 0 0 140px; /* 固定容器寬度 */
 }
 
 .profile-photo {
-    width: 140px;
+    width: 140px;    /* 設定為 140px，不會太大也不會太小 */
     height: 140px;
     border-radius: 50%;
     object-fit: cover;
-    object-position: center;
-    border: 4px solid #ffffff;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    border: 4px solid #fff;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
 .hero-right {
@@ -84,20 +76,20 @@ body {
 }
 
 .hero-right h1 {
-    font-size: 2.2rem;
+    font-size: 2.25rem;
+    color: #0f172a;
     margin-bottom: 0.5rem;
-    color: #111827;
 }
 
 .subtitle {
     font-size: 1.1rem;
-    color: #4b5563;
-    margin-bottom: 1rem;
+    color: #475569;
+    margin-bottom: 0.75rem;
 }
 
-/* 內容區塊 */
+/* 區塊樣式 */
 .section {
-    padding: 3rem 1.2rem;
+    padding: 3.5rem 1.2rem;
 }
 
 .section-alt {
@@ -110,14 +102,14 @@ body {
 }
 
 .section h2 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     margin-bottom: 1.5rem;
-    border-bottom: 2px solid #e5e7eb;
-    display: inline-block;
-    padding-bottom: 4px;
+    color: #1e293b;
+    border-left: 4px solid #3b82f6;
+    padding-left: 1rem;
 }
 
-/* Timeline 經歷與教育 */
+/* 經歷列表樣式 */
 .timeline {
     display: flex;
     flex-direction: column;
@@ -125,32 +117,32 @@ body {
 }
 
 .timeline-item {
-    background: #ffffff;
-    padding: 1.2rem;
-    border-radius: 0.75rem;
-    border: 1px solid #e5e7eb;
     display: flex;
     justify-content: space-between;
+    background: #f8fafc;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    border: 1px solid #e2e8f0;
 }
 
 .timeline-main h3 {
     font-size: 1.1rem;
-    color: #111827;
+    margin-bottom: 0.25rem;
 }
 
 .timeline-date {
+    font-weight: 500;
+    color: #64748b;
     font-size: 0.9rem;
-    color: #6b7280;
-    min-width: 120px;
-    text-align: right;
 }
 
-/* Footer 頁尾 */
+/* 頁尾 */
 .footer {
     padding: 2rem;
     text-align: center;
+    border-top: 1px solid #e2e8f0;
+    color: #94a3b8;
     font-size: 0.9rem;
-    color: #6b7280;
 }
 
 /* 手機版適應 */
@@ -158,13 +150,10 @@ body {
     .hero-container {
         flex-direction: column;
         text-align: center;
-        gap: 1rem;
+        gap: 1.5rem;
     }
     .timeline-item {
         flex-direction: column;
         gap: 0.5rem;
-    }
-    .timeline-date {
-        text-align: left;
     }
 }
