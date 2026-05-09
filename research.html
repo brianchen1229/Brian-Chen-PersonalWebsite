@@ -5,6 +5,59 @@
     <title>Research | Po-Wei (Brian) Chen</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <style>
+        /* 針對 Research 頁面的獨立樣式優化 */
+        .pub-list {
+            list-style: none;
+            margin-left: 0;
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .pub-list li {
+            background: #ffffff;
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 10px rgba(15, 23, 42, 0.06);
+            border: 1px solid #e5e7eb;
+        }
+
+        /* 標題樣式強化 */
+        .section h3 {
+            border-left: 4px solid #2563eb;
+            padding-left: 0.75rem;
+            margin-bottom: 1.2rem;
+            color: #111827;
+        }
+
+        /* 圖片上下對齊處理 */
+        .conf-photo-row {
+            margin-top: 1.2rem;
+            display: flex;
+            gap: 1rem;
+            align-items: stretch; /* 強制子元素高度一致 */
+        }
+
+        .conf-photo-small {
+            flex: 1;
+            height: 250px; /* 固定高度確保上下對齊 */
+            object-fit: cover; /* 裁切以填滿容器，不變形 */
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 640px) {
+            .conf-photo-row {
+                flex-direction: column;
+            }
+            .conf-photo-small {
+                height: auto;
+                aspect-ratio: 16 / 9;
+            }
+        }
+    </style>
 </head>
 <body>
     <header class="navbar">
@@ -21,85 +74,79 @@
         <section class="section">
             <div class="section-container">
                 <h2>Research</h2>
-                <p>
-                    My research experience primarily focuses on <strong>Machine Learning</strong> and <strong>Deep Learning</strong>. Currently, I am working on <strong>Denoising Diffusion Probabilistic Models (DDPM)</strong> at Academia Sinica, where we develop a Bayesian framework that integrates catalytic priors derived from classical statistical models to enhance predictive stability and uncertainty quantification. Additionally, I also conducted research on <strong>empirical asset pricing</strong> in the cryptocurrency market, comparing multiple machine learning methods—such as tree-based models, gradient boosting, Support Vector Regression (SVR), K-Nearest Neighbors (KNN), and neural networks—to construct effective factor investing strategies.
+                <p style="line-height: 1.8; text-align: justify; margin-bottom: 2rem; color: #374151;">
+                    My research experience primarily focuses on <strong>Machine Learning</strong> and <strong>Deep Learning</strong>. Currently, I am working on <strong>Denoising Diffusion Probabilistic Models (DDPM)</strong> at Academia Sinica, where we develop a <strong>Bayesian framework</strong> that integrates <strong>catalytic priors</strong> derived from classical statistical models to enhance predictive stability and uncertainty quantification. Additionally, I also conducted research on <strong>empirical asset pricing</strong> in the cryptocurrency market, comparing multiple machine learning methods—such as <strong>tree-based models, gradient boosting, Support Vector Regression (SVR), K-Nearest Neighbors (KNN), and neural networks</strong>—to construct effective factor investing strategies.
                 </p>
 
                 <!-- In Progress -->
-                <h3 style="margin-top:2rem;">In Progress</h3>
+                <h3>In Progress</h3>
                 <ul class="pub-list">
                     <li>
-                        <strong>Bayesian Inference for Diffusion Models: Integrating Synthetic and
-                        Observed Data with Catalytic Priors</strong>
+                        <strong>Bayesian Inference for Diffusion Models: Integrating Synthetic and Observed Data with Catalytic Priors</strong>
+                        <p style="font-size: 0.95rem; color: #6b7280; margin-top: 0.5rem;">
+                            Research Assistant Project at the Institute of Statistical Science, Academia Sinica.
+                        </p>
                     </li>
                 </ul>
 
-                <!-- Publish -->
-                <h3 style="margin-top:2rem;">Published</h3>
+                <!-- Published -->
+                <h3 style="margin-top:2.5rem;">Published</h3>
                 <ul class="pub-list">
-                    <li>
+                    <li style="color: #9ca3af; font-style: italic;">
                         To be added.
                     </li>
                 </ul>
 
                 <!-- Conference Presentation -->
-                <h3 style="margin-top:2rem;">Conference Presentations</h3>
+                <h3 style="margin-top:2.5rem;">Conference Presentations</h3>
                 <ul class="pub-list">
                     <li>
-                        <strong>
-                            Empirical Asset Pricing via Machine
-                            Learning for Cryptocurrency
-                        </strong>
-                        <a href="TRIA.pdf" target="_blank" rel="noopener noreferrer">[Slide]</a><br />
-                        Authors: Po-Wei Chen, Li-Han Chang, Hung-Wen Cheng, and Pei-Jie Hsiao<br />
-                        2025 Annual Conference and International Symposium of the Taiwan Risk and
-                        Insurance Association (TRIA), Taipei, Taiwan.
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                            <strong>Empirical Asset Pricing via Machine Learning for Cryptocurrency</strong>
+                            <a href="TRIA.pdf" target="_blank" rel="noopener noreferrer" style="color: #2563eb; text-decoration: none; font-size: 0.9rem;">[Slide]</a>
+                        </div>
+                        <div style="font-size: 0.9rem; color: #4b5563; margin-top: 0.5rem;">
+                            Authors: Po-Wei Chen, Li-Han Chang, Hung-Wen Cheng, and Pei-Jie Hsiao
+                        </div>
+                        <div style="font-size: 0.9rem; color: #6b7280;">
+                            2025 Annual Conference and International Symposium of the Taiwan Risk and Insurance Association (TRIA), Taipei, Taiwan.
+                        </div>
                         
                         <div class="conf-photo-row">
-                            <img src="TRIA_Post.jpg"
-                                 alt="TRIA conference poster"
-                                 class="conf-photo-small" />
-                            <img src="TRIA_Present.jpg"
-                                 alt="TRIA conference presentation"
-                                 class="conf-photo-small" />
+                            <img src="TRIA_Post.jpg" alt="TRIA conference poster" class="conf-photo-small" />
+                            <img src="TRIA_Present.jpg" alt="TRIA conference presentation" class="conf-photo-small" />
                         </div>
                     </li>
                 </ul>
 
                 <!-- Course Project -->
-                <h3 style="margin-top:2rem;">Course Projects</h3>
+                <h3 style="margin-top:2.5rem;">Course Projects</h3>
                 <ul class="pub-list">
                     <li>
                         <strong>
-                            <a href="https://brianchen1229.github.io/ny_crime_report/"
-                               target="_blank" rel="noopener noreferrer">
+                            <a href="https://brianchen1229.github.io/ny_crime_report/" target="_blank" rel="noopener noreferrer" style="color: #111827; text-decoration: none;">
                                 Regression Analysis for Crime Rate in New York State
                             </a>
                         </strong><br />
-                        Course: Regression Analysis, Soochow University<br />
-                        Feb. 2025 – June 2025
+                        <span style="font-size: 0.9rem; color: #6b7280;">Course: Regression Analysis, Soochow University (Feb. 2025 – June 2025).</span>
                     </li>
 
                     <li>
                         <strong>
-                            <a href="https://brianchen1229.github.io/moment_mgf_report/"
-                               target="_blank" rel="noopener noreferrer">
+                            <a href="https://brianchen1229.github.io/moment_mgf_report/" target="_blank" rel="noopener noreferrer" style="color: #111827; text-decoration: none;">
                                 Comparing Numerical Methods for Moment Calculation in the Bivariate Normal MGF
                             </a>
                         </strong><br />
-                        Course: Numerical Analysis, Soochow University<br />
-                        Feb. 2025 – June 2025
+                        <span style="font-size: 0.9rem; color: #6b7280;">Course: Numerical Analysis, Soochow University (Feb. 2025 – June 2025).</span>
                     </li>
 
                     <li>
                         <strong>
-                            <a href="https://brianchen1229.github.io/ml_factors_report/"
-                               target="_blank" rel="noopener noreferrer">
+                            <a href="https://brianchen1229.github.io/ml_factors_report/" target="_blank" rel="noopener noreferrer" style="color: #111827; text-decoration: none;">
                                 Factor Investing with Machine Learning
                             </a>
                         </strong><br />
-                        Course: Big Data and Fintech Practice, Soochow University<br />
-                        Feb. 2024 – June 2024
+                        <span style="font-size: 0.9rem; color: #6b7280;">Course: Big Data and Fintech Practice, Soochow University (Feb. 2024 – June 2024).</span>
                     </li>
                 </ul>
             </div>
@@ -108,9 +155,7 @@
 
     <footer class="footer">
         <div class="footer-container">
-            <p>
-                &copy; <span id="year"></span> Po-Wei (Brian) Chen
-            </p>
+            <p>&copy; <span id="year"></span> Po-Wei (Brian) Chen</p>
         </div>
     </footer>
 
