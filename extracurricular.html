@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <style>
-        /* 繼承與優化卡片樣式 */
         .pub-list {
             list-style: none;
             margin-left: 0;
@@ -22,58 +21,55 @@
             border-radius: 0.75rem;
             box-shadow: 0 4px 10px rgba(15, 23, 42, 0.06);
             border: 1px solid #e5e7eb;
-        }
-
-        .section h3 {
-            border-left: 4px solid #2563eb;
-            padding-left: 0.75rem;
-            margin-bottom: 1.2rem;
-            color: #111827;
-        }
-
-        /* 榮譽列表樣式 */
-        .honor-list {
-            font-size: 0.95rem;
-            color: #1e293b;
-            margin-left: 1.2rem;
-            margin-bottom: 1.2rem;
-            line-height: 1.8;
-        }
-
-        .honor-list li strong {
-            color: #2563eb;
-        }
-
-        /* 照片網格控制 */
-        .photo-grid {
-            margin-top: 1.2rem;
             display: flex;
-            gap: 1rem;
-            justify-content: flex-start;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
         }
 
-        .photo-item {
-            flex: 0 0 25%;    
-            max-width: 200px; 
-            height: 150px;    
+        .tournament-info {
+            flex: 1;
+        }
+
+        .tournament-title {
+            font-size: 1.15rem;
+            color: #111827;
+            font-weight: 600;
+        }
+
+        .tournament-title strong {
+            color: #2563eb;
+            margin-right: 8px;
+        }
+
+        .chinese-name {
+            display: block;
+            font-size: 0.9rem;
+            color: #6b7280;
+            margin-top: 4px;
+        }
+
+        /* 統一的照片樣式 */
+        .cup-photo {
+            flex: 0 0 180px;
+            width: 180px;
+            height: 120px;
             object-fit: cover;
             border-radius: 0.5rem;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .photo-item:hover {
-            transform: scale(1.05);
+            background-color: #f3f4f6; /* 沒照片時顯示灰色 */
         }
 
         @media (max-width: 640px) {
-            .photo-grid {
-                flex-wrap: wrap;
+            .pub-list li {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
             }
-            .photo-item {
-                flex: 0 0 45%; 
-                max-width: 100%;
-                height: 120px;
+            .cup-photo {
+                width: 100%;
+                flex: 0 0 auto;
+                height: 160px;
             }
         }
     </style>
@@ -93,27 +89,47 @@
         <section class="section">
             <div class="section-container">
                 <h2>Extracurricular Activities</h2>
+                <h3 style="border-left: 4px solid #2563eb; padding-left: 0.75rem; margin-bottom: 1.5rem;">Basketball Tournaments</h3>
 
-                <h3>Basketball</h3>
                 <ul class="pub-list">
                     <li>
-                        <strong>Department Basketball Team Vice Captain</strong>
-                        <p style="font-size: 0.95rem; color: #4b5563; margin-top: 0.4rem; margin-bottom: 0.8rem;">
-                            Dept. of Financial Engineering and Actuarial Mathematics, Soochow University
-                        </p>
-                        
-                        <ul class="honor-list">
-                            <li><strong>Champion</strong>, Statistics Graduate Cup (統計研究所盃)</li>
-                            <li><strong>Champion</strong>, National Interdepartmental Cup - North District I (全國系際盃北一區)</li>
-                            <li><strong>Champion</strong>, Northern Basketball League - NBL (北區籃球聯盟)</li>
-                            <li><strong>Champion</strong>, National Finance and Banking Cup (大財盃)</li>
-                            <li><strong>Champion</strong>, National Mathematics and Statistics Cup (大數盃)</li>
-                        </ul>
-
-                        <div class="photo-grid">
-                            <img src="FEAM1.jpg" alt="Basketball action" class="photo-item" />
-                            <img src="FEAM2.jpg" alt="Team photo" class="photo-item" />
+                        <div class="tournament-info">
+                            <div class="tournament-title"><strong>Champion</strong> Statistics Graduate Cup</div>
+                            <span class="chinese-name">統計研究所盃</span>
                         </div>
+                        <img src="cup_stat.jpg" alt="Statistics Graduate Cup" class="cup-photo" />
+                    </li>
+
+                    <li>
+                        <div class="tournament-info">
+                            <div class="tournament-title"><strong>Champion</strong> National Interdepartmental Cup (North District I)</div>
+                            <span class="chinese-name">全國系際盃北一區</span>
+                        </div>
+                        <img src="cup_interdept.jpg" alt="National Interdepartmental Cup" class="cup-photo" />
+                    </li>
+
+                    <li>
+                        <div class="tournament-info">
+                            <div class="tournament-title"><strong>Champion</strong> Northern Basketball League (NBL)</div>
+                            <span class="chinese-name">北區籃球聯盟</span>
+                        </div>
+                        <img src="cup_nbl.jpg" alt="NBL" class="cup-photo" />
+                    </li>
+
+                    <li>
+                        <div class="tournament-info">
+                            <div class="tournament-title"><strong>Champion</strong> National Finance and Banking Cup</div>
+                            <span class="chinese-name">大財盃</span>
+                        </div>
+                        <img src="cup_finance.jpg" alt="National Finance Cup" class="cup-photo" />
+                    </li>
+
+                    <li>
+                        <div class="tournament-info">
+                            <div class="tournament-title"><strong>Champion</strong> National Mathematics and Statistics Cup</div>
+                            <span class="chinese-name">大數盃</span>
+                        </div>
+                        <img src="cup_math.jpg" alt="National Math Cup" class="cup-photo" />
                     </li>
                 </ul>
             </div>
