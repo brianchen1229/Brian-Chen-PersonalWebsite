@@ -5,6 +5,58 @@
     <title>Extracurricular | Po-Wei (Brian) Chen</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <style>
+        /* 確保與 Research 頁面一致的獨立樣式 */
+        .pub-list {
+            list-style: none;
+            margin-left: 0;
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .pub-list li {
+            background: #ffffff;
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 10px rgba(15, 23, 42, 0.06);
+            border: 1px solid #e5e7eb;
+        }
+
+        .section h3 {
+            border-left: 4px solid #2563eb;
+            padding-left: 0.75rem;
+            margin-bottom: 1.2rem;
+            color: #111827;
+        }
+
+        /* 圖片容器：確保上下對齊且大小適中 */
+        .photo-grid {
+            margin-top: 1.2rem;
+            display: flex;
+            gap: 1rem;
+            align-items: stretch;
+        }
+
+        .photo-item {
+            flex: 1;
+            height: 250px; /* 與 Research 頁面圖片高度一致 */
+            object-fit: cover;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 640px) {
+            .photo-grid {
+                flex-direction: column;
+            }
+            .photo-item {
+                height: auto;
+                aspect-ratio: 16 / 9;
+            }
+        }
+    </style>
 </head>
 <body>
     <header class="navbar">
@@ -22,76 +74,35 @@
             <div class="section-container">
                 <h2>Extracurricular Activities</h2>
 
-                <!-- Basketball block -->
+                <!-- Basketball Section -->
                 <h3>Basketball</h3>
-                <p class="section-subtitle">
-                    Basketball has been a central part of my life, shaping my teamwork, leadership,
-                    and resilience. Below are some of the teams and tournaments I have participated in.
-                </p>
-
-                <div class="ball-timeline">
-
-                    <!-- Top: National Tournament Champion -->
-                    <div class="ball-item">
-                        <div class="ball-marker"></div>
-                        <div class="ball-content">
-                            <h4>National Statistics Graduate School Basketball Tournament – Champion</h4>
-                            <p class="ball-place">
-                                Institute of Statistical Science, Academia Sinica
-                            </p>
-                            <div class="ball-photo-row">
-                                <img src="Sinica_Basketball.jpg"
-                                     alt="Basketball team at the National Statistics Graduate School Basketball Tournament"
-                                     class="ball-photo-half" />
-                                <img src="Sinica2.jpg"
-                                     alt="Basketball team at the National Statistics Graduate School Basketball Tournament"
-                                     class="ball-photo-half" />
-                            </div>
+                <ul class="pub-list">
+                    <li>
+                        <strong>Department Basketball Team Vice Captain</strong>
+                        <p style="font-size: 0.95rem; color: #4b5563; margin-top: 0.5rem;">
+                            Financial Engineering and Actuarial Mathematics, Soochow University.
+                        </p>
+                        <div class="photo-grid">
+                            <!-- 替換為您的籃球活動照片 -->
+                            <img src="Basketball_1.jpg" alt="Basketball action" class="photo-item" />
+                            <img src="Basketball_2.jpg" alt="Team photo" class="photo-item" />
                         </div>
-                    </div>
+                    </li>
+                </ul>
 
-                    <!-- Middle: Department team (Vice Captain) -->
-                    <div class="ball-item">
-                        <div class="ball-marker"></div>
-                        <div class="ball-content">
-                            <h4>Basketball Team, Department of Financial Engineering and Actuarial Mathematics</h4>
-                            <p class="ball-place">
-                                Position: Vice Captain
-                            </p>
-                            <div class="ball-photo-row">
-                                <img src="FEAM1.jpg"
-                                     alt="Department of Financial Engineering and Actuarial Mathematics basketball team"
-                                     class="ball-photo-half" />
-                                <img src="FEAM2.jpg"
-                                     alt="Department of Financial Engineering and Actuarial Mathematics basketball team"
-                                     class="ball-photo-half" />
-                            </div>
+                <!-- Photography Section (Optional, based on user profile) -->
+                <h3 style="margin-top:2.5rem;">Photography</h3>
+                <ul class="pub-list">
+                    <li>
+                        <strong>Fujifilm X-series Digital Photography</strong>
+                        <p style="font-size: 0.95rem; color: #4b5563; margin-top: 0.5rem;">
+                            Focusing on manual shooting modes and hardware specifications.
+                        </p>
+                        <div class="photo-grid">
+                            <img src="Photo_Sample_1.jpg" alt="Photography work 1" class="photo-item" />
+                            <img src="Photo_Sample_2.jpg" alt="Photography work 2" class="photo-item" />
                         </div>
-                    </div>
-
-                    <!-- Bottom: High school team -->
-                    <div class="ball-item">
-                        <div class="ball-marker"></div>
-                        <div class="ball-content">
-                            <h4>School Basketball Team</h4>
-                            <p class="ball-place">
-                                Taipei Municipal Zhong-zheng Senior High School
-                            </p>
-                            <img src="ZZSH.jpg"
-                                 alt="High school basketball team at Zhong-zheng Senior High School"
-                                 class="ball-photo" />
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- Other block -->
-                <h3 style="margin-top:2.5rem;">Other</h3>
-                <p class="section-subtitle">
-                    Other extracurricular activities will be added here in the future.
-                </p>
-                <ul>
-                    <li>(You can list academic clubs, competitions, volunteering, etc. later.)</li>
+                    </li>
                 </ul>
 
             </div>
@@ -100,9 +111,7 @@
 
     <footer class="footer">
         <div class="footer-container">
-            <p>
-                &copy; <span id="year"></span> Po-Wei (Brian) Chen
-            </p>
+            <p>&copy; <span id="year"></span> Po-Wei (Brian) Chen</p>
         </div>
     </footer>
 
