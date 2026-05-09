@@ -63,7 +63,7 @@ body {
 }
 
 .hero-left {
-    flex: 0 0 200px;   /* 給它比頭像大一點的寬度，例如 280px */
+    flex: 0 0 200px;
     display: flex;
     justify-content: center;
 }
@@ -72,11 +72,11 @@ body {
     width: 160px;
     height: 160px;
     border-radius: 999px;
-    object-fit: contain;          /* 原本是 cover，改成 contain */
-    object-position: 60% 25%;     /* 視情況再調高或調低，例如 20%、30% */
+    object-fit: contain;
+    object-position: 60% 25%;
     border: 3px solid #e5e7eb;
     box-shadow: 0 10px 25px rgba(15, 23, 42, 0.15);
-    background-color: #f3f4f6;    /* 畫面邊邊空白時比較好看 */
+    background-color: #f3f4f6;
 }
 
 .hero-right {
@@ -115,46 +115,22 @@ body {
     color: #111827;
 }
 
+/* 研究頁面卡片通用樣式 (備份於 css 中以便全域調用) */
 .pub-list {
-    margin-left: 1.2rem;
-    margin-top: 0.5rem;
+    list-style: none;
+    margin-left: 0;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
 .pub-list li {
-    margin-bottom: 0.8rem;
-}
-
-/* ==== TRIA two photos side by side ==== */
-.conf-photo-row {
-    margin-top: 0.7rem;
-    display: flex;              /* 讓裡面的 img 水平排列 */
-    flex-direction: row;
-    gap: 0.75rem;               /* 中間間距 */
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-wrap: nowrap;          /* 先不要換行，桌機一定左右並排 */
-}
-
-.conf-photo-small {
-    flex: 0 0 48%;              /* 每張大約一半寬度 */
-    max-width: 48%;
-    height: auto;
+    background: #ffffff;
+    padding: 1.5rem;
     border-radius: 0.75rem;
-    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.12);
-    display: block;
-    object-fit: cover;
-}
-
-/* 手機才允許換行，避免太擠 */
-@media (max-width: 640px) {
-    .conf-photo-row {
-        flex-wrap: wrap;
-    }
-
-    .conf-photo-small {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.06);
+    border: 1px solid #e5e7eb;
 }
 
 /* Timeline style for CV-like layout */
@@ -185,24 +161,6 @@ body {
     color: #111827;
 }
 
-.timeline-place {
-    font-size: 0.95rem;
-    color: #4b5563;
-}
-
-.timeline-detail {
-    font-size: 0.9rem;
-    color: #6b7280;
-    margin-top: 0.2rem;
-}
-
-.timeline-date {
-    font-size: 0.9rem;
-    white-space: nowrap;
-    color: #4b5563;
-    margin-left: 1rem;
-}
-
 /* Footer */
 .footer {
     padding: 1.2rem 1.2rem 1.5rem;
@@ -218,126 +176,15 @@ body {
     color: #6b7280;
 }
 
-.footer a {
-    color: #2563eb;
-    text-decoration: none;
-}
-
-.footer a:hover {
-    text-decoration: underline;
-}
-
 /* Responsive */
 @media (max-width: 640px) {
-    .hero {
-        padding-top: 2.6rem;
-    }
-
     .nav-container {
         flex-direction: column;
         align-items: flex-start;
         gap: 0.3rem;
     }
 
-    .nav-links {
-        display: flex;
-        gap: 0.8rem;
-    }
-
     .timeline-item {
         flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .timeline-date {
-        margin-left: 0;
-    }
-}
-
-/* Subtitle under section titles */
-.section-subtitle {
-    font-size: 0.95rem;
-    color: #6b7280;
-    margin-bottom: 0.9rem;
-}
-
-/* Basketball vertical timeline */
-.ball-timeline {
-    position: relative;
-    margin-top: 1rem;
-    margin-left: 0.6rem;
-    padding-left: 1.6rem;
-    border-left: 2px solid #d1d5db;   /* 直線 */
-    display: flex;
-    flex-direction: column;
-    gap: 1.6rem;
-}
-
-.ball-item {
-    position: relative;
-    display: flex;
-    gap: 1rem;
-}
-
-.ball-marker {
-    position: absolute;
-    left: -1.15rem;        /* 貼在那條直線上 */
-    top: 0.3rem;
-    width: 12px;
-    height: 12px;
-    border-radius: 999px;
-    background: #2563eb;
-    border: 2px solid #eff6ff;
-}
-
-.ball-content {
-    flex: 1;
-}
-
-.ball-content h4 {
-    font-size: 1.0rem;
-    margin-bottom: 0.15rem;
-    color: #111827;
-}
-
-.ball-place {
-    font-size: 0.93rem;
-    color: #4b5563;
-}
-
-.ball-photo {
-    margin-top: 0.4rem;
-    width: 100%;
-    max-width: 250px;
-    border-radius: 0.75rem;
-    box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
-    display: block;
-}
-
-/* 兩張籃球照片左右並排 */
-.ball-photo-row {
-    margin-top: 0.4rem;
-    display: flex;
-    gap: 0.75rem;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-wrap: wrap;          /* 螢幕窄的時候允許換行 */
-}
-
-.ball-photo-half {
-    flex: 0 0 28%;     /* ← 每張一樣是寬度關鍵 */
-    max-width: 28%;    /* ← 想變小就改 40% / 35% */
-    width: 20%;
-    border-radius: 0.75rem;
-    box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
-    display: block;
-    object-fit: cover;
-}
-
-/* 小螢幕調整 */
-@media (max-width: 640px) {
-    .ball-timeline {
-        margin-left: 0.5rem;
-        padding-left: 1.4rem;
     }
 }
