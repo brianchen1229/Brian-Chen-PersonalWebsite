@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <style>
-        /* 繼承 Research 頁面的卡片樣式 */
+        /* 繼承與優化卡片樣式 */
         .pub-list {
             list-style: none;
             margin-left: 0;
@@ -31,13 +31,25 @@
             color: #111827;
         }
 
-        /* 嚴格控制照片大小與對齊 */
+        /* 榮譽列表樣式 */
+        .honor-list {
+            font-size: 0.95rem;
+            color: #1e293b;
+            margin-left: 1.2rem;
+            margin-bottom: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .honor-list li strong {
+            color: #2563eb;
+        }
+
+        /* 照片網格控制 */
         .photo-grid {
             margin-top: 1.2rem;
             display: flex;
             gap: 1rem;
             justify-content: flex-start;
-            align-items: stretch;
         }
 
         .photo-item {
@@ -47,6 +59,11 @@
             object-fit: cover;
             border-radius: 0.5rem;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .photo-item:hover {
+            transform: scale(1.05);
         }
 
         @media (max-width: 640px) {
@@ -77,17 +94,25 @@
             <div class="section-container">
                 <h2>Extracurricular Activities</h2>
 
-                <!-- Basketball Section -->
                 <h3>Basketball</h3>
                 <ul class="pub-list">
                     <li>
                         <strong>Department Basketball Team Vice Captain</strong>
-                        <p style="font-size: 0.95rem; color: #4b5563; margin-top: 0.5rem;">
-                            Financial Engineering and Actuarial Mathematics, Soochow University.
+                        <p style="font-size: 0.95rem; color: #4b5563; margin-top: 0.4rem; margin-bottom: 0.8rem;">
+                            Dept. of Financial Engineering and Actuarial Mathematics, Soochow University
                         </p>
+                        
+                        <ul class="honor-list">
+                            <li><strong>Champion</strong>, Statistics Graduate Cup (統計研究所盃)</li>
+                            <li><strong>Champion</strong>, National Interdepartmental Cup - North District I (全國系際盃北一區)</li>
+                            <li><strong>Champion</strong>, Northern Basketball League - NBL (北區籃球聯盟)</li>
+                            <li><strong>Champion</strong>, National Finance and Banking Cup (大財盃)</li>
+                            <li><strong>Champion</strong>, National Mathematics and Statistics Cup (大數盃)</li>
+                        </ul>
+
                         <div class="photo-grid">
-                            <img src="Basketball_1.jpg" alt="Basketball action" class="photo-item" />
-                            <img src="Basketball_2.jpg" alt="Team photo" class="photo-item" />
+                            <img src="FEAM1.jpg" alt="Basketball action" class="photo-item" />
+                            <img src="FEAM2.jpg" alt="Team photo" class="photo-item" />
                         </div>
                     </li>
                 </ul>
@@ -97,7 +122,7 @@
 
     <footer class="footer">
         <div class="footer-container">
-            <p>&copy; <span id="year"></span> Po-Wei (Brian) Chen</p>
+            <p>&copy; <span id="year"></span> Po-Wei (Brian) Chen · <a href="index.html">Home</a></p>
         </div>
     </footer>
 
