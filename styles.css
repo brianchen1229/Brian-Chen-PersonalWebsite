@@ -83,6 +83,7 @@ nav a.active {
   align-items: start;
 }
 
+/* 一般桌機版 */
 .portrait {
   width: 178px;
   height: 178px;
@@ -94,11 +95,17 @@ nav a.active {
   object-position: center center;
 }
 
-.portrait {
-  width: 118px;
-  height: 118px;
-  margin: 0;
-  grid-row: 1 / span 4;
+/* 中間是其他 CSS */
+
+@media (max-width: 680px) {
+  /* 其他手機版 CSS */
+
+  .portrait {
+    width: 118px;
+    height: 118px;
+    margin: 0;
+    grid-row: 1 / span 4;
+  }
 }
 
 .profile h1 {
