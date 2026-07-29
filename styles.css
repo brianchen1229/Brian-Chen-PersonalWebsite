@@ -83,24 +83,22 @@ nav a.active {
   align-items: start;
 }
 
-.portrait-placeholder {
+.portrait {
   width: 178px;
   height: 178px;
   margin-bottom: 20px;
   border-radius: 50%;
-  display: grid;
-  place-items: center;
-  border: 1px solid #bbb;
-  background: #f6f6f6;
-  color: #777;
-  font-size: 2.5rem;
-  letter-spacing: 0.08em;
-}
-
-img.portrait-placeholder {
   display: block;
+  border: 1px solid #bbb;
   object-fit: cover;
   object-position: center center;
+}
+
+.portrait {
+  width: 118px;
+  height: 118px;
+  margin: 0;
+  grid-row: 1 / span 4;
 }
 
 .profile h1 {
