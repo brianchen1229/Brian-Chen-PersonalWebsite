@@ -97,6 +97,12 @@ nav a.active {
   letter-spacing: 0.08em;
 }
 
+img.portrait-placeholder {
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+}
+
 .profile h1 {
   max-width: 220px;
   color: #333;
