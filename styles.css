@@ -130,6 +130,7 @@ nav a.active {
 }
 
 .profile-links {
+  margin-top: 16px;
   display: grid;
   gap: 7px;
 }
