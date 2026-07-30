@@ -1,3 +1,4 @@
+```css
 :root {
   --ink: #111;
   --muted: #555;
@@ -28,6 +29,8 @@ a {
   color: var(--link);
   text-underline-offset: 2px;
 }
+
+/* 上方導覽列 */
 
 .topbar {
   border-bottom: 1px solid var(--line);
@@ -72,6 +75,8 @@ nav a.active {
   color: var(--link);
 }
 
+/* 網頁主要排版 */
+
 .site-shell {
   width: min(1160px, calc(100% - 40px));
   min-height: calc(100vh - 160px);
@@ -83,29 +88,17 @@ nav a.active {
   align-items: start;
 }
 
-/* 一般桌機版 */
+/* 左側個人資料 */
+
 .portrait {
   width: 178px;
   height: 178px;
   margin-bottom: 20px;
+  border: 1px solid #bbb;
   border-radius: 50%;
   display: block;
-  border: 1px solid #bbb;
   object-fit: cover;
   object-position: center center;
-}
-
-/* 中間是其他 CSS */
-
-@media (max-width: 680px) {
-  /* 其他手機版 CSS */
-
-  .portrait {
-    width: 118px;
-    height: 118px;
-    margin: 0;
-    grid-row: 1 / span 4;
-  }
 }
 
 .profile h1 {
@@ -123,12 +116,6 @@ nav a.active {
   line-height: 1.45;
 }
 
-.follow {
-  margin: 20px 0 9px;
-  color: #777;
-  font-size: 0.85rem;
-}
-
 .profile-links {
   margin-top: 16px;
   display: grid;
@@ -137,8 +124,8 @@ nav a.active {
 
 .profile-links a,
 .profile-links span {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
   color: #555;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
   font-size: 0.88rem;
   text-decoration: none;
 }
@@ -146,6 +133,8 @@ nav a.active {
 .profile-links a:hover {
   color: var(--link);
 }
+
+/* 右側主要內容 */
 
 .content {
   max-width: 780px;
@@ -155,9 +144,8 @@ nav a.active {
 .page-title {
   margin-bottom: 26px;
   padding-bottom: 13px;
-  border-bottom: 1px solid var(--line);
-  color: #252525;
   border-bottom: 2px solid #222;
+  color: #252525;
   font-size: 2rem;
   font-weight: 700;
   line-height: 1.25;
@@ -191,6 +179,29 @@ nav a.active {
   margin-bottom: 11px;
 }
 
+/* News */
+
+.news-list {
+  padding-left: 0 !important;
+  list-style: none;
+}
+
+.news-list li {
+  display: grid;
+  grid-template-columns: 105px minmax(0, 1fr);
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.news-date {
+  color: #666;
+  font-size: 0.92rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Biography */
+
 .entry {
   padding: 3px 0 13px;
 }
@@ -211,6 +222,8 @@ nav a.active {
 .entry ul {
   margin-top: 9px;
 }
+
+/* Publication 與 Conference */
 
 .publication-item,
 .talk {
@@ -235,6 +248,11 @@ nav a.active {
   text-decoration: none;
 }
 
+.button:hover {
+  border-color: var(--link);
+  color: var(--link);
+}
+
 .coming-soon {
   display: inline-block;
   margin-top: 8px;
@@ -242,19 +260,16 @@ nav a.active {
   font-style: italic;
 }
 
+/* Hobbies */
+
 .photo-placeholder {
-  margin-top: 22px;
   min-height: 150px;
+  margin-top: 22px;
+  border: 1px dashed #aaa;
   display: grid;
   place-items: center;
-  border: 1px dashed #aaa;
   color: #777;
   font-style: italic;
-}
-
-.button:hover {
-  border-color: var(--link);
-  color: var(--link);
 }
 
 .hobby-list {
@@ -265,10 +280,10 @@ nav a.active {
 
 .hobby-list li {
   padding: 14px 0;
+  border-bottom: 1px solid var(--line);
   display: flex;
   justify-content: space-between;
   gap: 24px;
-  border-bottom: 1px solid var(--line);
 }
 
 .hobby-list span {
@@ -277,24 +292,28 @@ nav a.active {
   font-size: 0.85rem;
 }
 
+/* 頁尾 */
+
 footer {
   min-height: 88px;
   padding: 24px max(20px, calc((100vw - 1160px) / 2));
+  border-top: 1px solid var(--line);
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-  border-top: 1px solid var(--line);
   color: #888;
   font-size: 0.78rem;
 }
 
+/* 平板版 */
+
 @media (max-width: 960px) {
   .nav-wrap {
+    padding: 16px 0;
     align-items: flex-start;
     flex-direction: column;
     gap: 10px;
-    padding: 16px 0;
   }
 
   nav {
@@ -309,6 +328,8 @@ footer {
     gap: 44px;
   }
 }
+
+/* 手機版 */
 
 @media (max-width: 680px) {
   .nav-wrap,
@@ -328,19 +349,28 @@ footer {
 
   .profile {
     display: grid;
-    grid-template-columns: 118px 1fr;
+    grid-template-columns: 118px minmax(0, 1fr);
     column-gap: 22px;
+    align-items: start;
   }
 
-  .portrait-placeholder {
+  .portrait {
     width: 118px;
     height: 118px;
     margin: 0;
-    grid-row: 1 / span 4;
+    grid-row: 1 / span 3;
   }
 
-  .follow {
-    margin: 10px 0 4px;
+  .profile h1 {
+    max-width: none;
+  }
+
+  .role {
+    max-width: none;
+  }
+
+  .profile-links {
+    margin-top: 12px;
   }
 
   .page-title {
@@ -350,6 +380,12 @@ footer {
   .entry-date {
     float: none;
     margin: 0 0 5px;
+  }
+
+  .news-list li {
+    grid-template-columns: 1fr;
+    gap: 2px;
+    margin-bottom: 16px;
   }
 
   .hobby-list li {
@@ -365,3 +401,4 @@ footer {
     align-items: flex-start;
   }
 }
+```
