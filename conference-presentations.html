@@ -1,33 +1,223 @@
+Replace the entire contents of `conference-presentations.html` with this code:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Conference Presentations | Po-Wei (Brian) Chen</title>
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Conference presentations by Po-Wei (Brian) Chen"
+  >
+
+  <title>
+    Conference Presentations | Po-Wei (Brian) Chen
+  </title>
+
   <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .conference-list {
+      margin: 0;
+      padding-left: 1.2rem !important;
+      list-style-type: square;
+    }
+
+    .conference-list > li {
+      margin-bottom: 24px;
+      padding-left: 4px;
+    }
+
+    .conference-year {
+      font-weight: 700;
+    }
+
+    .conference-name {
+      color: var(--ink);
+      font-style: italic;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .conference-name:hover {
+      color: var(--link);
+      text-decoration: underline;
+    }
+
+    .presentation-type {
+      margin-left: 5px;
+      white-space: nowrap;
+    }
+
+    .conference-note {
+      margin-top: 6px;
+      padding-left: 1.35rem !important;
+      list-style-type: disc;
+    }
+
+    .conference-note li {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 680px) {
+      .presentation-type {
+        margin-left: 0;
+        white-space: normal;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <header class="topbar"><div class="nav-wrap"><a class="wordmark" href="index.html">陳柏瑋 Brian Chen</a><nav><a href="biography.html">Biography</a><a href="publication.html">Publication</a><a class="active" href="conference-presentations.html">Conference presentations</a><a href="cv.html">CV</a><a href="hobbies.html">Hobbies</a></nav></div></header>
+  <header class="topbar">
+    <div class="nav-wrap">
+      <a class="wordmark" href="index.html">
+        陳柏瑋 Brian Chen
+      </a>
+
+      <nav aria-label="Main navigation">
+        <a href="biography.html">
+          Biography
+        </a>
+
+        <a href="publication.html">
+          Publication
+        </a>
+
+        <a
+          class="active"
+          href="conference-presentations.html"
+        >
+          Conference presentations
+        </a>
+
+        <a href="cv.html">
+          CV
+        </a>
+
+        <a href="hobbies.html">
+          Hobbies
+        </a>
+      </nav>
+    </div>
+  </header>
+
   <main class="site-shell">
     <aside class="profile">
-  <img class="portrait" src="MyPic.JPG" alt="Po-Wei (Brian) Chen">
+      <img
+        class="portrait"
+        src="MyPic.JPG"
+        alt="Po-Wei (Brian) Chen"
+      >
 
-  <h1>Po-Wei (Brian) Chen</h1>
+      <h1>Po-Wei (Brian) Chen</h1>
 
-  <p class="role">
-    Research Assistant at Institute of Statistical Science, Academia Sinica
-  </p>
+      <p class="role">
+        Research Assistant at Institute of Statistical Science,
+        Academia Sinica
+      </p>
 
-  <div class="profile-links">
-    <span>📍 Taipei, Taiwan</span>
-    <a href="mailto:brianchen1229@gmail.com">✉️ Email</a>
-  </div>
-</aside>
+      <div class="profile-links">
+        <span>
+          📍 Taipei, Taiwan
+        </span>
+
+        <a href="mailto:brianchen1229@gmail.com">
+          ✉️ Email
+        </a>
+      </div>
+    </aside>
+
     <article class="content">
-      <h1 class="page-title">Conference presentations</h1>
-      <div class="talk"><h2>Empirical Asset Pricing via Machine Learning for Cryptocurrency</h2><p><strong>Po-Wei Chen</strong>, Li-Han Chang, Hung-Wen Cheng, and Pei-Jie Hsiao</p><p>2025 Annual Conference and International Symposium of the Taiwan Risk and Insurance Association (TRIA), Taipei, Taiwan.</p><p><span class="coming-soon">Presentation materials will be added later.</span></p></div>
+      <h1 class="page-title">
+        Conference presentations
+      </h1>
+
+      <ul class="conference-list">
+        <li>
+          <span class="conference-year">
+            2025,
+          </span>
+
+          <span>
+            “Bayesian Inference for Diffusion Models: Integrating
+            Synthetic and Observed Data with Catalytic Priors”
+          </span>
+
+          <br>
+
+          <a
+            class="conference-name"
+            href="https://www3.stat.sinica.edu.tw/3ijc2026/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            ISI-ISM-ISSAS Joint Conference
+          </a>,
+
+          Academia Sinica, Taipei, Taiwan.
+
+          <span class="presentation-type">
+            [Poster Presentation]
+          </span>
+
+          <ul class="conference-note">
+            <li>
+              This work was later retitled “Bridging Synthetic and
+              Real Data with Catalytic Priors for Diffusion Models.”
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <span class="conference-year">
+            2025,
+          </span>
+
+          <span>
+            “Empirical Asset Pricing via Machine Learning for
+            Cryptocurrency”
+          </span>
+
+          <br>
+
+          <a
+            class="conference-name"
+            href="https://tria.asia/bebuilder-1399/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Annual Conference and International Symposium of the
+            Taiwan Risk and Insurance Association
+          </a>,
+
+          Taipei, Taiwan.
+
+          <span class="presentation-type">
+            [20-Minute Oral Presentation]
+          </span>
+        </li>
+      </ul>
     </article>
   </main>
-  <footer><p>© <span class="year"></span> Po-Wei (Brian) Chen.</p><p>Academic website.</p></footer><script src="script.js"></script>
+
+  <footer>
+    <p>
+      © <span class="year"></span> Po-Wei (Brian) Chen.
+    </p>
+
+    <p>
+      Academic website.
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
+```
