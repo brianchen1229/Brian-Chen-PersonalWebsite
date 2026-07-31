@@ -260,12 +260,26 @@ nav a.active {
   font-style: italic;
 }
 
-/* CV */
+/* CV page layout */
+
+.cv-page .site-shell {
+  grid-template-columns: 200px minmax(0, 1fr);
+  gap: 48px;
+}
+
+.cv-page .content {
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+}
+
+/* CV viewer */
 
 .cv-viewer {
-  width: 100%;
-  height: 80vh;
-  min-height: 720px;
+  width: min(100%, 900px);
+  height: 92vh;
+  min-height: 900px;
+  margin: 0 auto;
   border: 1px solid var(--line);
   border-radius: 4px;
   overflow: hidden;
@@ -279,8 +293,11 @@ nav a.active {
   border: 0;
 }
 
+/* CV download button */
+
 .cv-download {
-  margin-top: 24px;
+  width: min(100%, 900px);
+  margin: 24px auto 0;
   text-align: center;
 }
 
@@ -376,9 +393,19 @@ footer {
     gap: 44px;
   }
 
+  .cv-page .site-shell {
+    grid-template-columns: 180px minmax(0, 1fr);
+    gap: 34px;
+  }
+
   .cv-viewer {
-    height: 75vh;
-    min-height: 650px;
+    width: 100%;
+    height: 85vh;
+    min-height: 760px;
+  }
+
+  .cv-download {
+    width: 100%;
   }
 }
 
@@ -394,7 +421,8 @@ footer {
     font-size: 0.86rem;
   }
 
-  .site-shell {
+  .site-shell,
+  .cv-page .site-shell {
     padding-top: 38px;
     grid-template-columns: 1fr;
     gap: 44px;
@@ -447,8 +475,13 @@ footer {
   }
 
   .cv-viewer {
-    height: 70vh;
-    min-height: 520px;
+    width: 100%;
+    height: 75vh;
+    min-height: 560px;
+  }
+
+  .cv-download {
+    width: 100%;
   }
 
   .download-button {
